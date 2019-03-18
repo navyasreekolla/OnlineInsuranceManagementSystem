@@ -1,0 +1,47 @@
+<html>
+<head>
+<title>New Customer</title>
+</head>
+<style>
+.project
+{
+background-color:yellow;
+padding:25px;
+text-align:center;
+font-size:45px;
+color:rgb(0,0,255);
+}
+body
+{
+background-color:rgb(204, 204, 255);
+background:url(login.jpg);
+background-repeat: no-repeat;
+background-size:1400px 900px;
+}
+.button
+{
+width:150px;
+height:50px;
+background-color:#9933ff;
+color:yellow;
+}
+</style>
+<body>
+<form method="post" action="registration.php">
+<h2 class="project"><a href="ooad.html"><img src="back.png" align="left" height="75" width="80"></a>Registration</h2>
+<font color="#00ff00" size="6.5">
+Name*:&emsp;<input type="text" name="name"></br>
+Date of Birth*:&emsp;<input type="text" name="dob" value="DD/MM/YYYY"></br>
+Gender*:&emsp;<input type="radio" name="gender" value="male"> Male&emsp;&emsp;
+<input type="radio" name="gender" value="female"> Female</br>
+Mobile*:&emsp;<input type="text" name="mobile"></br>
+Email*:&emsp;<input type="text" name="email"></br>
+Password*:&emsp;<input type="password" name="password"></br>
+PAN&emsp;<input type="text" name="pan"></br>
+Passport Number&emsp;<input type="text" name="pass"></br></br>
+<input type="checkbox" name="confirm">&emsp;<font color="#ff9900">I confirm that the mobile number mentioned above is registered under my name and begin used by me.
+I here by authorize insurance to use the mobile number for any communication</font></br></br>
+<p align="center"><a href="policy1.html"><input type="button" class="button" value="proceed" name="proceed"></a></p>
+</form>
+</body>
+</html>

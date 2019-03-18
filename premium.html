@@ -1,0 +1,102 @@
+<html>
+<head>
+<title>Premium</title>
+</head>
+<style>
+{
+box-sizing:border-box;
+}
+.project
+{
+background-color:yellow;
+text-align:center;
+font-size:35px;
+color:rgb(0,0,255);
+}
+body
+{
+background-color:rgb(204, 204, 255);
+background:url(premium.jpg);
+background-repeat: no-repeat;
+background-size:1400px 900px;
+}
+.button
+{
+background-color:#6666ff;
+text-align:center;
+width:350px;
+color:yellow;
+padding:25px;
+font-size:30px;
+align:left;
+}
+.img
+{
+margin-top:0px;
+margin-right:0px;
+}
+.downbutton
+{
+width:150px;
+height:50px;
+background-color:blue;
+color:yellow;
+}
+</style>
+<body>
+<form name="calculator">
+<p class="project"><a href="ooad.html"><img src="back.png" align="left"  height="90" width="80"></a>
+<a href="policy1.html"><input type="button" class="button" value="policies available"></a>
+<a href="premium.html"><input type="button" class="button" value="premium calculation"></a>
+<a href="mypolicies.html"><input type="button" class="button" value="my policies"></a>
+<a href="ooad.html"><img src="logout.png" align="right" height="90" width="80"></a></br></p></br>
+<p align="left"><font color="rgb(0,0,255)" size="6.5">First Name&emsp;<input type="text" name="first"></br>
+Middle Name&emsp;<input type="text" name="middle"></br>
+Last Name&emsp;<input type="text" name="last"></br>
+Date of Birth&emsp;<input type="text" name="dob"></br>
+Gender*:&emsp;<input type="radio" name="gender" value="male"> Male&emsp;&emsp;
+<input type="radio" name="gender" value="female"> Female</br>
+Mobile*:&emsp<input type="text" name="mobile"></br>
+Email*:&emsp;<input type="text"></br>
+Select the plans:
+<select>
+  <option value="healthplan">Health plan</option>
+  <option value="wholelifeplans">Whole Life plans</option>
+  <option value="termplans">Term Plans</option>
+  <option value="unitlinkedplans">Unit Linked plans</option>
+<option value="childrenplans">Children plans</option>
+<option value="moneybackplans">Money Back plans</option>
+<option value="pensionplans">Pension plans</option>
+<option value="endowmentplans">Endowment plans</option>
+</select></br>
+Premium Amount(Rs)&emsp;<input type="text" name="premium" id="premium"></br>
+Tenure/Term of the plan&emsp;<input type="text" name="tenure" id="tenure"></br>
+Payment Frequency:
+<select name="frequency" id="frequency">
+  <option value="yearly">Yearly</option>
+  <option value="halfyearly">Half-Yearly</option>
+  <option value="quarterly">Quarterly</option>
+  <option value="monthly">Monthly</option>
+</select></br>
+<button class="downbutton" onclick="calculate()">Calculate</button>&emsp;&emsp;&emsp;
+<a href="payment.html"><input type="button" name="pay" value="pay" class="downbutton"></a></p>
+</form>
+<script>
+function calculate()
+{
+var p=document.getElementById("premium").value;
+var q=document.getElementById("frequency").value;
+if(q=="yearly")
+var r=0.06375*p;
+else if(q=="halfyearly")
+var r=(0.06375*p)/2;
+else if(q=="quarterly")
+var r=(0.06375*p)/4;
+else
+var r=(0.06375*p)/12;
+alert(r);
+return;
+}
+</script>
+</body>
+</html>

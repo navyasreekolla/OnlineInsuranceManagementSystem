@@ -1,0 +1,116 @@
+<html>
+<head>
+<title>pay</title>
+</head>
+<style>
+body
+{
+background-color:rgb(204, 204, 255);
+background:url(pay.png);
+background-repeat: no-repeat;
+background-size:1400px 900px;
+}
+h2
+{
+color:blue;
+  text-shadow: 1px 1px 2px black, 0 0 25px aqua, 0 0 5px darkblue, 0 -1px black;
+}
+div {
+  width:200px;
+  height:250px;
+  padding: 15px;
+  background-color:#ffff99;
+resize: both;
+  overflow: auto;
+  box-shadow: 10px 10px grey;
+ -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 6s; /* Safari 4.0 - 8.0 */
+  animation-name: example;
+  animation-duration: 6s;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes example {
+  0%   {background-color:#ffff99;}
+  20%  {background-color:#ffcccc;}
+  40%  {background-color:#99ff99;}
+  60% {background-color:#99ccff;}
+  80% {background-color:#ffcc00;}
+100% {background-color:#66ff99;}
+}
+
+/* Standard syntax */
+@keyframes example {
+  0%   {background-color:#ffff99;}
+  20%  {background-color:#ffcccc;}
+  40%  {background-color:#99ff99;}
+  60% {background-color:#99ccff;}
+80% {background-color:#ffcc00;}
+100% {background-color:#66ff99;}
+}
+div:hover
+{
+width:300px;
+}
+</style>
+<body>
+<form>
+<p><a href="premium.html"><img src="back.png" align="left" height="110" width="80"></a></br>
+<a href="ooad.html"><img src="logout.png" align="right" height="110" width="80"></a></br></p></br></br></br>
+<h2>Pay through:</h2></br></br>
+<div><font color="rgb(0,0,255)" size="6.5">
+<input type="radio" name="credit card" onclick="c()"><font color="brown">Credit Card</br>
+<input type="radio" name="debit card" onclick="d()">Debit Card</br>
+<input type="radio" name="Google Pay" onclick="g()">Google Pay</br>
+<input type="radio" name="Phone Pe" onclick="pp()">Phone pe</br>
+<input type="radio" name="Paytm" onclick="p()">Paytm</br></p></div>
+</form>
+<script>
+function c()
+{
+var no=parseInt(window.prompt("enter the card number"));
+var cv=parseInt(window.prompt("enter cvv"));
+if(no==123456789012 && cv==123)
+alert("payment successfull");
+else
+alert("invalid card number or cvv");
+}
+function d()
+{
+var no=parseInt(window.prompt("enter the card number"));
+var cv=parseInt(window.prompt("enter cvv"));
+if(no==123456789012)
+{
+if(cv==123)
+alert("payment successfull");
+else
+alert("invalid card number or cvv");
+}
+}
+function g()
+{
+var pin=parseInt(window.prompt("enter the google pay pin"));
+if(pin==1234)
+alert("payment successfull");
+else
+alert("incorrect pin");
+}
+function pp()
+{
+var pin=parseInt(window.prompt("enter the phone pe pin"));
+if(pin==1234)
+alert("payment successfull");
+else
+alert("incorrect pin");
+}
+function p()
+{
+var pin=parseInt(window.prompt("enter the paytm pin"));
+if(pin==1234)
+alert("payment successfull");
+else
+alert("incorrect pin");
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color:#6699ff;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.topnav-right {
+  float: right;
+}
+p.ex1
+{
+	margin-left:-800px;
+	font-size:40px;
+	margin-top:-290px;
+	font-family:WildWest;
+        color:
+}
+p.ex2
+{
+	margin-left:-800px;
+	font-size:40px;
+	font-family:WildWest;
+}
+.mySlides {
+	display:none;
+	margin-left:0px;
+	margin-top:0px;
+	height:350px;
+	width:1200px;
+}
+h1{
+	color:red;
+	font-family:Comic Sans MS;
+}
+
+</style>
+</head>
+<body bgcolor='lightgray'>
+
+<div class="topnav">
+  <a class="active" href="#home">Home</a>
+  <a href="customer.html" target="_blank">Customer</a>
+  <div class="topnav-right">
+    <a href="help.html" target="_blank">Help</a>
+    <a href="feedback.html" target="_blank">Feedback</a>
+   <a href="Contact.docx" target="_blank">Contact Us</a>
+  </div>
+</div>
+<center>
+<h1><i>GOOD HANDS FOR GOOD LIFE<i><h1>
+<img class="mySlides" src="homepic.jpg" >
+  <img class="mySlides" src="home1.png" >
+  <img class="mySlides" src="home2.cms" >
+  <img class="mySlides" src="home3.jpg" >
+  <img class="mySlides" src="home4.jpg" >
+  <img class="mySlides" src="home5.jpg" >
+  <img class="mySlides" src="home6.jpg" >
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+
+</body>
+</html>
